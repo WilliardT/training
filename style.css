@@ -39,6 +39,7 @@ body {
 .purple {
   background-color: #5f4ab6;
   border: 1px solid #6a5660;
+  font-family: bold;
 }
 
 .orange {

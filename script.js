@@ -11,7 +11,8 @@ calcButtons.addEventListener("click", function (e) {
   const buttonValue = button.textContent;
 
   if (buttonValue === "%" && firstNumber !== 0) {
-    calcPanelResualt.textContent = calcPanelMathLine.textContent / 100; // не правильная формула
+    calcPanelResualt.textContent = firstNumber * (secondNumber / 100);
+    //calcPanelResualt.textContent = calcPanelMathLine.textContent / 100; // не правильная формула
   }
 
   if (buttonValue === "C") {
