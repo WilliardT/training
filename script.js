@@ -1,5 +1,5 @@
 const calcPanelMathLine = document.getElementById("calcPanelMathLine");
-const calcPanelResualt = document.getElementById("calcPanelResualt");
+const calcPanelResult = document.getElementById("calcPanelResult");
 const calcButtons = document.getElementById("calcButtons");
 
 let firstNumber = "";
@@ -11,13 +11,13 @@ calcButtons.addEventListener("click", function (e) {
   const buttonValue = button.textContent;
 
   if (buttonValue === "%" && firstNumber !== 0) {
-    calcPanelResualt.textContent = firstNumber * (secondNumber / 100);
-    //calcPanelResualt.textContent = calcPanelMathLine.textContent / 100; // не правильная формула
+    calcPanelResult.textContent = firstNumber * (secondNumber / 100);
+    //calcPanelResult.textContent = calcPanelMathLine.textContent / 100; // не правильная формула
   }
 
   if (buttonValue === "C") {
     calcPanelMathLine.textContent = "";
-    calcPanelResualt.textContent = "";
+    calcPanelResult.textContent = "";
     resetVars();
   } else if (button.classList.contains("number")) {
     if (operator.length > 0) {
@@ -39,13 +39,13 @@ calcButtons.addEventListener("click", function (e) {
     secondNumber = +secondNumber;
 
     if (operator === "/") {
-      calcPanelResualt.textContent = firstNumber / secondNumber;
+      calcPanelResult.textContent = firstNumber / secondNumber;
     } else if (operator === "*") {
-      calcPanelResualt.textContent = firstNumber * secondNumber;
+      calcPanelResult.textContent = firstNumber * secondNumber;
     } else if (operator === "-") {
-      calcPanelResualt.textContent = firstNumber - secondNumber;
+      calcPanelResult.textContent = firstNumber - secondNumber;
     } else if (operator === "+") {
-      calcPanelResualt.textContent = firstNumber + secondNumber;
+      calcPanelResult.textContent = firstNumber + secondNumber;
     }
     resetVars();
   } else if (buttonValue === ".") {
